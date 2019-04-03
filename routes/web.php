@@ -14,15 +14,19 @@
 Route::get('/dc', function () {
     //Encriptar en Laravel
     $cadena = "laravel_api";
-    echo "HASH MAKE:" . "<br/>";
+    echo "<strong>" . "HASH MAKE:" . "</strong>" . "<br/>";
     echo Hash::make('api_laravel') . "<br/>";
-    echo "BCRYPT:" . "<br/>";
+    echo "<strong>" . "BCRYPT:". "</strong>" . "<br/>";
     echo bcrypt('mi_secret_pass') . "<br/>";
     //Encriptar
-    echo "CRYPT:" . "<br/>";
-    echo Crypt::encrypt($cadena) . "<br/>";
+    echo "<strong>" . "CRYPT:" . "</strong>" . "<br/>";
+    $cadena_encriptada= Crypt::encrypt($cadena);
+    echo $cadena_encriptada . "<br/>";
     //Desencriptar
-    // echo Crypt::decrypt($cadena) . "<br/>"; 
-    echo "MD5:" . "<br/>";
+    echo "<strong>" . "DECRYPT:" . "</strong>" . "<br/>";
+    $cadena_desencriptada = Crypt::decrypt($cadena_encriptada);
+    echo  $cadena_desencriptada . "<br/>";
+   
+    echo "<strong>" . "MD5:" . "</strong>" . "<br/>";
     echo md5('stalin_maza'). "<br/>";
 });
