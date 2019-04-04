@@ -30,3 +30,17 @@ Route::get('/dc', function () {
     echo "<strong>" . "MD5:" . "</strong>" . "<br/>";
     echo md5('stalin_maza'). "<br/>";
 });
+
+
+Route::get("/saveTweet",function(){
+    return view('tweets.send-tweet');
+});
+
+Route::post("/tw/saveTweet", "TwitterController@saveTweet")->name("tweet.save");
+
+
+#Socialite
+
+// Route::get('login/facebook','Auth\LoginController@redirectToProvider')->name('login.fb');
+
+// Route::get('login/facebook/callback','Auth\LoginController@handleProviderCallback')->name('login.callback');

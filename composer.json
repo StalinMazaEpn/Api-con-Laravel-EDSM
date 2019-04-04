@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.0",
         "laravel-notification-channels/twitter": "^2.1",
         "laravel/framework": "5.7.*",
+        "laravel/socialite": "^4.1",
         "laravel/tinker": "^1.0",
         "santigarcor/laratrust": "4.0.*",
         "thujohn/twitter": "^2.2"

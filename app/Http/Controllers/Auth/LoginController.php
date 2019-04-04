@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Socialite;#
 
 class LoginController extends Controller
 {
@@ -35,5 +36,29 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    // public function redirectToProvider(){
+    //     return Socialite::driver('facebook')->redirect();
+    // }
+
+    // public function handleProviderCallback(){
+    //     $user = Socialite::driver('facebook')->user();
+    //     if($user = User::where('email',$user->email)->first()){
+    //         return $this->authAndRedirect($user);
+    //     }else{
+    //         $data = User::create([
+    //             'name' => $user->name,
+    //             'email' => $user->email,
+    //             'avatar'=> $user->avatar
+    //         ]);
+
+    //         return $this->authAndRedirect($data);
+    //     }
+    // }
+
+    public function authAndRedirect($user){
+        Auth::login($user);
+        return $redirect
     }
 }

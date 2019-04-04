@@ -68,4 +68,19 @@ http://laravel.jsmc/api_laravel_ed/public/api/tw/search/5/%23alcaldequito?api_to
 composer require laravel-notification-channels/twitter
 
 
- php artisan migrate --path=database/migrations/2019_04_03_040428_create_tweets_table.php
+php artisan migrate --path=database/migrations/2019_04_03_040428_create_tweets_table.php
+
+php artisan make:notification TweetPublished
+
+Socialite Login
+composer require laravel/socialite
+Integrar el Inicio de Sesion con Facebook y necesita https
+
+INTRODUCCION A HEROKU
+
+Soporta: NodeJS, PHP, Ruby, Python, Java, GO, Kotlin
+
+Indicar donde esta el proyecto compilado
+
+
+

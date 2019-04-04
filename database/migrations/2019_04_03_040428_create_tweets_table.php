@@ -17,7 +17,7 @@ class CreateTweetsTable extends Migration
             $table->increments('id');
             $table->string('account');
             $table->text('tweet');
-            $table->timestamps('tweeted_at')->nullable();
+            $table->timestamp('tweeted_at')->nullable();
             $table->timestamps();
         });
     }
