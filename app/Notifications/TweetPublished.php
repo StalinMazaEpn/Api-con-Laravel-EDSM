@@ -38,12 +38,7 @@ class TweetPublished extends Notification
         return [TwitterChannel::class];
     }
 
-    /**
-     * Get the mail representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return \Illuminate\Notifications\Messages\MailMessage
-     */
+   
     // public function toMail($notifiable)
     // {
     //     return (new MailMessage)
@@ -66,6 +61,7 @@ class TweetPublished extends Notification
     // }
 
     public function toTwitter($message){
-        return new TwitterStatusUpdate($message->tweet);
+        // return new TwitterStatusUpdate($message->tweet);
+        return new TwitterStatusUpdate('Laravel notifications are awesome!');
     }
 }

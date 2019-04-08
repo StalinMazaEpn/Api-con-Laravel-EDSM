@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/dc', function () {
+Route::get("/",function(){
+    return view('welcome');
+});
+
+Route::get('/encriptacion', function () {
     //Encriptar en Laravel
     $cadena = "laravel_api";
     echo "<strong>" . "HASH MAKE:" . "</strong>" . "<br/>";

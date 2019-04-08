@@ -76,11 +76,40 @@ Socialite Login
 composer require laravel/socialite
 Integrar el Inicio de Sesion con Facebook y necesita https
 
+composer require themattharris/tmhoauth
+
 INTRODUCCION A HEROKU
 
 Soporta: NodeJS, PHP, Ruby, Python, Java, GO, Kotlin
 
 Indicar donde esta el proyecto compilado
+se trabaja con la linea de comandos, la documentacion 
+es extensa y en ingles
+
+- Create new app
+-selecciona nombre, region y seleccionar pipeline: secciones
+- pipeline: ambientes: dev, sq, produccion
+- pipeline: view ax, stage (probar version), production(produccion), por ahora sin pipeline
+- cleardb mysql
+
+Heroku Git
+deploy: subir codigo a un servidor
+Instalar Heroku CLI
+heroku login e iniciar sesion
+git init
+heroku git:remote -a nombre_proyecto_heroku //conexion al repo de github
+git add .
+git commit -m
+git push heroku master
+
+necesito crear archivo Procfile e indicar a la aplicacion que necesita
+
+Dividir Repos en Ramas DEV y MASTER
+
+
+```
+web: vendor/bin/heroku-php-apache2 public/
+```
 
 
 
