@@ -48,3 +48,12 @@ Route::post("/tw/saveTweet", "TwitterController@saveTweet")->name("tweet.save");
 // Route::get('login/facebook','Auth\LoginController@redirectToProvider')->name('login.fb');
 
 // Route::get('login/facebook/callback','Auth\LoginController@handleProviderCallback')->name('login.callback');
+
+
+// TEST API CON GUZZLY
+Route::group(['prefix' => 'test_sm'], function () {
+    Route::get("all_posts", "TestController@all_posts")->name("test.all_posts");
+    Route::get("create_user", "TestController@create_user")->name("test.create_user");
+    Route::get("update_user", "TestController@update_user")->name("test.update_user");
+    Route::get("delete_user", "TestController@delete_user")->name("test.delete_user");
+});
